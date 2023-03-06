@@ -16,7 +16,7 @@ Chat GPT Query automation with list of questions
 
 ![image](https://user-images.githubusercontent.com/10444449/223047522-08fe1cbe-65a5-4129-8fc6-b10d8694004e.png)
 
-3) Click on Create new secret Key to create and copy the Secret Key <strong>(If you don't copy the value you will never get it)</strong>
+3) Click Create new secret Key and copy the Secret Key <strong>(If you don't copy the value you will never get it)</strong>
 4) Set it in the environment variable with key as "OPENAI_API_KEY" and value is the copied one
 
 
@@ -48,3 +48,7 @@ C:\> py .\query.py
 
 ###### Done with recording by list questions and answers
 
+
+<strong>Now, you will be able to see the output in 'questions_and_answers.docx' file.</strong>
+
+That's all.
