@@ -33,6 +33,16 @@ Chat GPT Query automation with list of questions
 
 
 
+**Where are questions?**
+
+
+You can add your questions in <strong>questions.txt</strong>
+
+Please find the screenshot to follow the format.
+
+![image](https://user-images.githubusercontent.com/10444449/223050587-fe8dd463-4adf-4600-9dff-2bd9299b4a69.png)
+
+
 
 
 **Run Python script to automate queries on Chat GPT**
