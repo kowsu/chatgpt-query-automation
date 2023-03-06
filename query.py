@@ -1,7 +1,7 @@
 import openai
 import docx
 
-openai.api_key = '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'
+openai.api_key = '[API-KEY]'
 engine = "davinci"
 
 def ask_gpt(prompt):
