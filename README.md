@@ -8,4 +8,16 @@ Required softwares:
 
 
 
+Run Python script to automate queries on Chat GPT
+
+C:\> py .\query.py
+
+
+
+If we see the below message; script execution completed 
+
+'Done with recording by list questions and answers'
+
+
+
 
