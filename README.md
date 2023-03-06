@@ -1,25 +1,22 @@
 # chatgpt-query-automation
 Chat GPT Query automation with list of questions
 
-Required softwares:
+**Required softwares:**
 1) Python (https://www.python.org/downloads/)
 2) Install python openapi package (pip install openapi)
 3) Install python python-docx package (pip install python-docx)
 
 
 
-Run Python script to automate queries on Chat GPT
 
-C:\> py .\query.py
+**If we see the below message, script execution completed**
 
-
-
-If we see the below message; script execution completed 
-
-'Done with recording by list questions and answers'
+**'Done with recording by list questions and answers'**
 
 
-Steps to get OpenAI API Key
+
+
+**Steps to get OpenAI API Key**
 1) Go to https://platform.openai.com/account/api-keys
 2) Select API Keys on the left navigation menu; find the below screenshot for reference
 
@@ -29,7 +26,7 @@ Steps to get OpenAI API Key
 4) Set it in the environment variable with key as "OPENAI_API_KEY" and value is the copied one
 
 
-Please find the below image for reference
+**Please find the below image for reference**
 
 
 ![image](https://user-images.githubusercontent.com/10444449/223046925-489155f0-2883-4342-a59f-8853b6785713.png)
@@ -38,5 +35,8 @@ Please find the below image for reference
 
 
 
+**Run Python script to automate queries on Chat GPT**
+
+C:\> py .\query.py
 
 
