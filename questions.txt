@@ -1,3 +1,19 @@
-What is Java?
-Why Java used Enterprise apps?
-What are the frameworks implemented on Java?
+Chapter-1: Introduction to Tableau
+Sub Chapter: History of Tableau
+Question: $What is Tableau$
+Question: $What is the latest version of Tableau$
+Sub Chapter: Examples of Tableau Dashboards
+Question: $Give any example dashboards in Tableau$
+
+Chapter-2: About Setup
+Sub Chapter: Installation
+Question: $Tell us about installation of tableau$
+
+Chapter-3: Code Samples
+Sub Chapter: Samples
+Question: $Tableau Code Samples$
+
+
+Chapter-4: Tableau Dashboards
+Sub Chapter: Dashboards
+Question: $Usecases of Tableau Dashboards$
