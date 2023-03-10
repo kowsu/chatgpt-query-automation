@@ -7,6 +7,8 @@ Chat GPT Query automation with list of questions
       - Run <strong>pip install openapi</strong> in command prompt
 3) Install python python-docx package
       - Run <strong>pip install python-docx</strong> in command prompt
+4) Install pyfiglet package
+      - Run <strong>pip install pyfiglet</strong> in command prompt
 
 
 
