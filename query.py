@@ -47,8 +47,6 @@ print(ascii_banner)
 print("\n\nChat GPT Query automation script is running.\n\n")
 document = docx.Document()
 
-import re
-
 with open('questions.txt', 'r', encoding='utf-8') as f:
     questions = f.readlines()
     current_chapter = ""
