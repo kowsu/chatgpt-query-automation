@@ -3,7 +3,7 @@ Chat GPT Query automation with list of questions
 
 **Required softwares:**
 1) Python (https://www.python.org/downloads/)
-2) Install python openapi package
+2) Install python openai package
       - Run <strong>pip install openai</strong> in command prompt
 3) Install python python-docx package
       - Run <strong>pip install python-docx</strong> in command prompt
