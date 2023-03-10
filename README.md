@@ -38,13 +38,13 @@ Please find the screenshot to follow the format.
 
 ![image](https://user-images.githubusercontent.com/10444449/223050587-fe8dd463-4adf-4600-9dff-2bd9299b4a69.png)
 
-**Input has to be in below format**
+**Input format has to follow the below things**
 
-Chapter should contains "Chapter-" in the sentence
+1) Chapter should contains "Chapter-" in the sentence
 
-Sub Chapter should contains "Sub Chapter" in the sentence
+2) Sub Chapter should contains "Sub Chapter" in the sentence
 
-Question should contains "Question" in the sentence and actual question should be embedded in "$"
+3) Question should contains "Question" in the sentence and actual question should be embedded in "$"
 
 
 
