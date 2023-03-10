@@ -76,7 +76,7 @@ with open('questions.txt', 'r', encoding='utf-8') as f:
                 question_number += 1
                 question = match.group(1)
                 question_label = f"{current_chapter} - {current_subchapter} - Question {question_number} - {question}?"
-                print("Now Executing " + question_label)
+                print("Now Executing " + question_label + "\n")
                 document.add_heading(question, level=3)
                 response = ask_gpt(question)
                 document.add_paragraph(f"{response}")
