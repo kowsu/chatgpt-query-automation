@@ -45,11 +45,11 @@ document = docx.Document()
 
 with open('questions.txt', 'r', encoding='utf-8') as f:
     questions = f.readlines()
-    first_chapter = True  # flag for first chapter
+    first_chapter = True 
     for i in range(len(questions)):
         if "Chapter-" in questions[i]:
             if not first_chapter:
-                document.add_page_break()  # add page break for new chapter
+                document.add_page_break()
             else:
                 first_chapter = False  # unset flag for first chapter
             document.add_heading(questions[i].strip(), level=1)
@@ -67,7 +67,6 @@ with open('questions.txt', 'r', encoding='utf-8') as f:
                 document.add_paragraph(f"{response}")
 
 
-        
-timestamp = time.time()
+
 document.save("chat_gpt_response.docx")
 print("Chat GPT Query automation script execution completed.")
