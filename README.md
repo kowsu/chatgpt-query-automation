@@ -38,7 +38,7 @@ Please find the screenshot to follow the format.
 
 ![image](https://user-images.githubusercontent.com/10444449/223050587-fe8dd463-4adf-4600-9dff-2bd9299b4a69.png)
 
-Input has to be in this format:
+**Input has to be in below format**
 
 Chapter should contains "Chapter-" in the sentence
 
