@@ -9,6 +9,8 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 engine="text-davinci-003"
 min_response_lines = 15
 max_tokens = 2000
+sleep_time = 5 #In seconds
+halt_to_questions = 3
 
 def ask_gpt(prompt):
     prompt += "\n"
@@ -53,6 +55,7 @@ with open('questions.txt', 'r', encoding='utf-8') as f:
     current_subchapter = ""
     question_number = 0
     first_chapter = True 
+    counter = 0
     for i in range(len(questions)):
         if "Chapter-" in questions[i]:
             if not first_chapter:
@@ -80,7 +83,12 @@ with open('questions.txt', 'r', encoding='utf-8') as f:
                 document.add_heading(question, level=3)
                 response = ask_gpt(question)
                 document.add_paragraph(f"{response}")
-
+                counter += 1
+                if counter == halt_to_questions:
+                    print('I am going to sleep for ' + str(sleep_time) + ' seconds')
+                    time.sleep(sleep_time)                    
+                    counter = 0
+                    
 
 document.save("chat_gpt_response.docx")
 print("Chat GPT Query automation script execution completed.")
