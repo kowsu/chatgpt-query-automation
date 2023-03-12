@@ -57,38 +57,42 @@ with open('questions.txt', 'r', encoding='utf-8') as f:
     first_chapter = True 
     counter = 0
     for i in range(len(questions)):
-        if "Chapter-" in questions[i]:
-            if not first_chapter:
-                document.add_page_break()
-            else:
-                first_chapter = False
-            current_chapter = questions[i].strip()
-            document.add_heading(current_chapter, level=1)
-            current_subchapter = ""
-            question_number = 0
-            pageBreakFlag = True
-        elif "Sub Chapter:" in questions[i]:
-            current_subchapter = questions[i].strip()
-            document.add_heading(current_subchapter, level=2)
-            question_number = 0
-            pageBreakFlag = False
-        elif "Question:" in questions[i]:
-            match = re.search('\$(.*?)\$', questions[i])
-            pageBreakFlag = False
-            if match:
-                question_number += 1
-                question = match.group(1)
-                question_label = f"{current_chapter} - {current_subchapter} - Question {question_number} - {question}?"
-                print("Now Executing " + question_label + "\n")
-                document.add_heading(question, level=3)
-                response = ask_gpt(question)
-                document.add_paragraph(f"{response}")
-                counter += 1
-                if counter == halt_to_questions:
-                    print('I am going to sleep for ' + str(sleep_time) + ' seconds')
-                    time.sleep(sleep_time)                    
-                    counter = 0
-                    
+        try:
+            if "Chapter-" in questions[i]:
+                if not first_chapter:
+                    document.add_page_break()
+                else:
+                    first_chapter = False
+                current_chapter = questions[i].strip()
+                document.add_heading(current_chapter, level=1)
+                current_subchapter = ""
+                question_number = 0
+                pageBreakFlag = True
+            elif "Sub Chapter:" in questions[i]:
+                current_subchapter = questions[i].strip()
+                document.add_heading(current_subchapter, level=2)
+                question_number = 0
+                pageBreakFlag = False
+            elif "Question:" in questions[i]:
+                match = re.search('\$(.*?)\$', questions[i])
+                pageBreakFlag = False
+                if match:
+                    question_number += 1
+                    question = match.group(1)
+                    status_label = f"{current_chapter} - {current_subchapter} - Question {question_number} - {question}?"
+                    print("Now Executing " + status_label + "\n")
+                    document.add_heading(question, level=3)
+                    response = ask_gpt(question)
+                    document.add_paragraph(f"{response}")
+                    counter += 1
+                    if counter == halt_to_questions:
+                        print('Automation is going to sleep for ' + str(sleep_time) + ' seconds')
+                        time.sleep(sleep_time)                    
+                        counter = 0
+        except Exception as e:
+            print(f"Exception occurred, but writing successful answers to a file {e}")
+            document.add_page_break()
+            break
 
 document.save("chat_gpt_response.docx")
-print("Chat GPT Query automation script execution completed.")
+print("Chat GPT Query automation script execution completed")
